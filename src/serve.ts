@@ -10,16 +10,16 @@ const app = express();
 app.use(express.json())
 
 app.get('/', async (req, res) => {
-    //const repoUser = getRepository(User)
-    //let user = new User();
-    //.first_name = 'Gustavo'
-    //user.last_name = 'Emanuel'
-    //user.age = 11
+    const repoUser = getRepository(User)
+    let user = new User();
+    user.first_name = 'Gustavo'
+    user.last_name = 'Emanuel'
+    user.age = 11
 
-    //let user_saved = await repoUser.save(user)
+    let user_saved = await repoUser.save(user)
 
 
-    //return res.send(user_saved)
+    return res.send(user_saved)
 
     return res.send('s')
 })
